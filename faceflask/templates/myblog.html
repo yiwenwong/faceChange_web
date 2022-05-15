@@ -1,0 +1,54 @@
+<html>
+ {% block content %}
+<head>
+    {% if title %}
+    <title>
+        {{title}}-博客
+    </title>
+    {% else %}
+    <title>
+        博客
+    </title>
+    {% endif %}
+
+    <link rel="stylesheet" href="static/myblog.css">
+</head>
+<body>
+<div class="scroll">
+    <h1>欢迎来到 {{ user.username }}的博客!</h1>
+</div>
+ <div class="box">
+    <form action="{{ url_for('blog_action') }}" method="post">
+  <p>被换的脸: <input type="file" name="being_changed" id="being_changed" /></p>
+  <p>要换的脸: <input type="file" name="to_change" id="to_change" /></p>
+     <p> <input type="submit" value="Submit" /></p>
+ </form>
+</div>
+
+
+
+
+    <div class="menu_container">
+        <input type="checkbox" name="open" id="open">
+        <label for="open" class="bt">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="menu">
+            <li style="--i:1">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            <li style="--i:2">
+                <a href="/blog">
+                    ChangingFace
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</body>
+{% endblock %}
+</html>

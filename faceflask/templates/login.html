@@ -1,0 +1,38 @@
+<html>
+
+<head>
+ <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/index.css" />
+    <title>用户登录</title>
+ 
+</head>
+
+<body>
+
+    <form action="{{ url_for('login1') }}" method="post" >
+<div class="card">
+        <div id="signupform" class="front" >
+        </br>
+            <font color="28FF28"><b>藏好了呦(๑•̀ㅂ•́)و✧"</b></font>
+            </div>
+        <div class="back">
+        </br>
+      </br>
+            <font color=“28FF28” size="20" class="sign"><b>用户登陆</b></font>
+
+</br>
+</br>
+<font color="28FF28">用户名：</font><input type="text" id="usename" name="usename" placeholder="请输入用户名……"/>
+</br>
+<font color="28FF28">密码：</font><input type="password" id="password" name="password" placeholder="请输入密码……" />
+</br>
+<input type="submit" value="提交" />
+<input type="reset" value="重置" onclick="reload()"/>
+
+        </div>
+</div>
+
+    </form>
+</body>
+
+</html>
